@@ -1,0 +1,167 @@
+1. Maternal uncle
+2. Father-in-law
+3. cannot determined
+4. Father
+5. Grandson
+6. x+a*y
+7. R
+8.Brother in law
+9.Father
+10.S
+11.10km
+12.south
+13.south wast
+14.south east
+
+
+
+JAVA
+
+
+1.True
+2.10, 110
+3.True
+4.Java main() method is always static, so that compiler can call it without the creation of an object or before the creation of an object of the class.
+
+
+5.public class ReverseArray {
+    public static void main(String[] args) {
+        int[] array = { 10, 45, 7, 9, 2 };
+        
+        System.out.println("Original array:");
+        printArray(array);
+        
+        reverseArray(array);
+        
+        System.out.println("Reversed array:");
+        printArray(arr);
+    }
+    
+    public static void reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        
+        while (start < end) {
+            int temp = array[start];
+            arr[start] = array[end];
+            arr[end] = temp;
+            
+            start++;
+            end--;
+        }
+    }
+    
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+6.public class ArrayDescending {
+    public static void main(String[] args) {
+        int[] array = {2, 5, 4, 8, 2, 3, 6, 2};
+        Arrays.sort(array);
+        int[] result = removeDuplicates(array);
+        System.out.println("Sorted Array (Descending Order) without Duplicates: " + Arrays.toString(result));
+    }
+    public static int[] removeDuplicates(int[] arr) {
+        int length = arr.length;
+        int count = 0; 
+        for (int i = 0; i < length - 1; i++) {
+            if (arr[i] != arr[i + 1]) {
+                count++;
+            }
+        }
+        count++;
+        int[] result = new int[count];
+        result[0] = arr[0];
+        int index = 1;
+        for (int i = 1; i < length; i++) {
+            if (arr[i] != arr[i - 1]) {
+                result[index] = arr[i];
+                index++;
+            }
+        }
+        return Arrays.copyOf(result, count);
+    }
+}
+
+
+
+
+7.Done
+
+
+8.this---* this keyword is used with the objects only.
+         * It refers to the current object.
+
+  this()-* this() is used with constructors only.
+	 * It refers to the constructor of the same class
+
+
+
+
+9.import java.util.*;  
+class Swap   
+{  
+    public static void main(String a[])   
+    {   
+        System.out.println("Enter the value of x and y");  
+        Scanner sc = new Scanner(System.in);  
+       
+        int x = sc.nextInt();  
+        int y = sc.nextInt();  
+        System.out.println("before swapping numbers: "+x +" "+ y);  
+      
+        x = x + y;   
+        y = x - y;   
+        x = x - y;   
+        System.out.println("After swapping: "+x +"  " + y);   
+    }   
+}  
+
+
+10.(1) public class PatternPrint {
+    public static void main(String[] args) {
+        System.out.println("&               &");
+        System.out.println("          &");
+        System.out.println("&               &");
+    }
+}
+
+
+ (2) public class PatternPrint {
+    public static void main(String[] args) {
+        printPattern();
+    }
+    
+    public static void printPattern() {
+        System.out.println("%      %    %");
+        System.out.println("%      &      %");
+        System.out.println("%      %      %");
+    }
+}
+
+   
+ (3) public class PatternPrint {
+    public static void main(String[] args) {
+        printPattern();
+    }
+    
+    public static void printPattern() {
+        System.out.println("%      %    %");
+        System.out.println("%            %");
+        System.out.println("%      %      %");
+    }
+}
